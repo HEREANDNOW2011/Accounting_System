@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Entry</title>
+</head>
+<body>
+    <h1>Add Entry</h1>
+    <form method="post">
+        <label for="date">Date:</label>
+        <input type="text" name="date" required><br>
+        <label for="reason">Reason:</label>
+        <input type="text" name="reason" required><br>
+        <label for="amount">Amount:</label>
+        <input type="number" name="amount" required><br>
+        <label for="remarks">Remarks:</label>
+        <input type="text" name="remarks" required><br>
+        <input type="submit" value="Add">
+    </form>
+    <a href="{{ url_for('index') }}">Back to Accounting System</a>
+</body>
+</html>
+

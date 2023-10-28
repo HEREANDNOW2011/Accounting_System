@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Accounting System</title>
+</head>
+<body>
+    <h1>Accounting System</h1>
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Reason</th>
+            <th>Amount</th>
+            <th>Remarks</th>
+            <th>Edit</th>
+        </tr>
+        {% for entry in csv_data %}
+            <tr>
+                <td>{{ entry[0] }}</td>
+                <td>{{ entry[1] }}</td>
+                <td>{{ entry[2] }}</td>
+                <td>{{ entry[3] }}</td>
+                <td><a href="{{ url_for('edit_entry', index=loop.index0) }}">Edit</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+    <a href="{{ url_for('add_entry') }}">Add Entry</a>
+</body>
+</html>
+
